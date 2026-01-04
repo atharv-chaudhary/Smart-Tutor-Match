@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutor Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Matching Tutors</h1>
+    <p>Based on your learning requirements</p>
+</header>
+
+<section id="results"></section>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject");
+    const studentClass = params.get("class");
+    const mode = params.get("mode");
+
+    const resultsDiv = document.getElementById("results");
+
+    resultsDiv.innerHTML = `
+        <h2>Your Requirements</h2>
+        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>Class:</strong> ${studentClass}</p>
+        <p><strong>Mode:</strong> ${mode}</p>
+
+        <h2>Available Tutors</h2>
+     
+    <div class="tutor-grid">
+
+        <div class="tutor-card">
+            <h3>Rachel</h3>
+            <p>Subject: ${subject}</p>
+            <p>Class: ${studentClass}</p>
+            <p>Mode: ${mode}</p>
+        </div>
+
+        <div class="tutor-card">
+            <h3>Samantha</h3>
+            <p>Subject: ${subject}</p>
+            <p>Class: ${studentClass}</p>
+            <p>Mode: ${mode}</p>
+        </div>
+        
+        <div class="tutor-card">
+            <h3>Malik</h3>
+            <p>Subject: ${subject}</p>
+            <p>Class: ${studentClass}</p>
+            <p>Mode: ${mode}</p>
+        </div>
+
+        <div class="tutor-card">
+            <h3>Felix</h3>
+            <p>Subject: ${subject}</p>
+            <p>Class: ${studentClass}</p>
+            <p>Mode: ${mode}</p>
+        </div>
+
+    </div>
+    `;
+</script>
+
+</body>
+</html>
+
+<p style="text-align:center; margin: 20px; font-size: 14px; color: gray;">
+    This is a prototype built for learning purposes. Tutor profiles are sample data.
+</p>
+<footer>
+    <p>© January 2026 | Smart Tutor Match | Created by Atharv</p>
+</footer>
+
